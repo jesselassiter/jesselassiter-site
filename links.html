@@ -1,175 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jesse Lassiter — Links and site pages." />
-  <title>Links • Jesse Lassiter</title>
-
-  <style>
-    :root{
-      --bg: #0b1020;
-      --bg2:#0a0f1d;
-      --card: rgba(255,255,255,0.06);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.68);
-      --border: rgba(255,255,255,0.14);
-      --shadow: 0 18px 45px rgba(0,0,0,0.35);
-      --radius: 18px;
-      --max: 900px;
-      --accent1: #7c3aed;
-      --accent2: #22d3ee;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root{
-        --bg: #f7f7fb;
-        --bg2: #ffffff;
-        --card: rgba(10,15,29,0.06);
-        --text: rgba(10,15,29,0.92);
-        --muted: rgba(10,15,29,0.65);
-        --border: rgba(10,15,29,0.12);
-        --shadow: 0 18px 45px rgba(10,15,29,0.12);
-      }
-    }
-
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      color:var(--text);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:
-        radial-gradient(1200px 700px at 10% -10%, rgba(124,58,237,0.25), transparent 55%),
-        radial-gradient(900px 600px at 90% 0%, rgba(34,211,238,0.18), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-    }
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .wrap{ max-width:var(--max); margin:0 auto; padding: 28px 18px 70px; }
-
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 10px 6px 18px;
-    }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:0.2px; }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
-    }
-    .nav{ display:flex; gap:12px; color:var(--muted); font-weight:600; }
-    .nav a{ padding:8px 10px; border-radius:12px; }
-    .nav a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
-
-    .hero{
-      margin-top: 10px;
-      padding: 24px 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), transparent);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    h1{ margin:0 0 8px; font-size: 30px; letter-spacing:-0.4px; }
-    p{ margin:0; color:var(--muted); }
-
-    .grid{
-      margin-top: 14px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-    .card{
-      grid-column: span 6;
-      padding: 16px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    }
-    .card h2{ margin:0 0 8px; font-size: 16px; }
-    .desc{ color:var(--muted); font-size: 14px; margin-top: 6px; }
-    .pill{
-      display:inline-block;
-      margin-top:10px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-weight: 650;
-      font-size: 12px;
-      background: rgba(255,255,255,0.05);
-    }
-
-    footer{
-      margin-top: 22px;
-      padding: 18px 6px 0;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    @media (max-width: 860px){
-      .card{ grid-column: 1 / -1; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><span class="dot"></span> Jesse Lassiter</div>
-      <div class="nav">
-        <a href="/index.html">Home</a>
-        <a href="/links.html">Links</a>
-      </div>
-    </header>
-
-    <main class="hero">
-      <h1>Links</h1>
-      <p>A simple hub for everything on this site.</p>
-    </main>
-
-    <section class="grid">
-      <!-- Site Pages -->
-      <a class="card" href="/index.html">
-        <h2>Home</h2>
-        <div class="desc">Main page with highlights and contact.</div>
-        <span class="pill">Page</span>
-      </a>
-
-      <!-- Add more pages here as you create them -->
-      <a class="card" href="/links.html">
-        <h2>Links</h2>
-        <div class="desc">This page — a directory for the site.</div>
-        <span class="pill">Page</span>
-      </a>
-
-      <!-- External Links -->
-      <a class="card" href="https://www.linkedin.com/" target="_blank" rel="noopener">
-        <h2>LinkedIn</h2>
-        <div class="desc">Professional profile and experience.</div>
-        <span class="pill">External</span>
-      </a>
-
-      <a class="card" href="mailto:you@jesselassiter.com">
-        <h2>Email</h2>
-        <div class="desc">Reach me directly.</div>
-        <span class="pill">Contact</span>
-      </a>
-    </section>
-
-    <footer>
-      <div>© <span id="year"></span> Jesse Lassiter</div>
-      <div><a href="/index.html">Back to Home</a></div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+diff --git a/links.html b/links.html
+index d08ebbdddad4671ac1b58a8bbb8b5d4c4681c465..b029d77495e24effcd9c89b07ab4b9b12a356fe7 100644
+--- a/links.html
++++ b/links.html
+@@ -120,50 +120,57 @@
+ </head>
+ <body>
+   <div class="wrap">
+     <header>
+       <div class="brand"><span class="dot"></span> Jesse Lassiter</div>
+       <div class="nav">
+         <a href="/index.html">Home</a>
+         <a href="/links.html">Links</a>
+       </div>
+     </header>
+ 
+     <main class="hero">
+       <h1>Links</h1>
+       <p>A simple hub for everything on this site.</p>
+     </main>
+ 
+     <section class="grid">
+       <!-- Site Pages -->
+       <a class="card" href="/index.html">
+         <h2>Home</h2>
+         <div class="desc">Main page with highlights and contact.</div>
+         <span class="pill">Page</span>
+       </a>
+ 
+       <!-- Add more pages here as you create them -->
++
++      <a class="card" href="/style-options.html">
++        <h2>Style Concepts</h2>
++        <div class="desc">Three alternate design directions for the homepage.</div>
++        <span class="pill">Preview</span>
++      </a>
++
+       <a class="card" href="/links.html">
+         <h2>Links</h2>
+         <div class="desc">This page — a directory for the site.</div>
+         <span class="pill">Page</span>
+       </a>
+ 
+       <!-- External Links -->
+       <a class="card" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+         <h2>LinkedIn</h2>
+         <div class="desc">Professional profile and experience.</div>
+         <span class="pill">External</span>
+       </a>
+ 
+       <a class="card" href="mailto:you@jesselassiter.com">
+         <h2>Email</h2>
+         <div class="desc">Reach me directly.</div>
+         <span class="pill">Contact</span>
+       </a>
+     </section>
+ 
+     <footer>
+       <div>© <span id="year"></span> Jesse Lassiter</div>
+       <div><a href="/index.html">Back to Home</a></div>
+     </footer>
+   </div>
