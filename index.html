@@ -11,7 +11,6 @@
       --bg: #0b1020;
       --bg2:#0a0f1d;
       --card: rgba(255,255,255,0.06);
-      --card2: rgba(255,255,255,0.10);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.68);
       --border: rgba(255,255,255,0.14);
@@ -27,7 +26,6 @@
         --bg: #f7f7fb;
         --bg2: #ffffff;
         --card: rgba(10,15,29,0.06);
-        --card2: rgba(10,15,29,0.10);
         --text: rgba(10,15,29,0.92);
         --muted: rgba(10,15,29,0.65);
         --border: rgba(10,15,29,0.12);
@@ -55,18 +53,28 @@
     header{
       display:flex; align-items:center; justify-content:space-between;
       padding: 10px 6px 20px;
+      gap: 14px;
+      flex-wrap: wrap;
     }
     .brand{
       display:flex; align-items:center; gap:10px;
       font-weight:700;
       letter-spacing:0.2px;
+      white-space: nowrap;
     }
     .dot{
       width:10px; height:10px; border-radius:999px;
       background: linear-gradient(135deg, var(--accent1), var(--accent2));
       box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
     }
-    nav{ display:flex; gap:14px; color:var(--muted); font-weight:600; flex-wrap:wrap; }
+    nav{
+      display:flex;
+      gap:10px;
+      color:var(--muted);
+      font-weight:600;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
     nav a{ padding:8px 10px; border-radius:12px; }
     nav a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
 
@@ -201,8 +209,7 @@
 
       <div class="cta">
         <a class="btn primary" href="/links.html">Explore Links</a>
-        <a class="btn" href="https://www.linkedin.com/in/jesse-lassiter/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="mailto:you@jesselassiter.com">Email</a>
+        <a class="btn" href="#contact">Connect</a>
       </div>
 
       <div class="meta">U.S.-based • Open to remote • Director / VP-level roles</div>
@@ -264,7 +271,7 @@
         <h2>Operational Excellence &amp; Automation</h2>
         <p>
           Strengthened configuration hygiene, vulnerability management, and deployment workflows through structured automation,
-          significantly reducing resolution times and increasing system stability.
+          increasing system stability and reducing operational overhead.
         </p>
         <div class="meta">
           Automation • Reliability Engineering • Process Optimization
@@ -291,15 +298,13 @@
       <div class="card full">
         <h2>Let’s Connect</h2>
         <p>
-          I welcome conversations regarding Director and VP-level technology leadership opportunities,
-          enterprise modernization initiatives, and platform strategy roles.
-          <br><br>
-          Email: <a href="mailto:you@jesselassiter.com">you@jesselassiter.com</a>
-          &nbsp;•&nbsp;
-          <a href="https://www.linkedin.com/in/jesse-lassiter" target="_blank" rel="noopener">
-            LinkedIn Profile
-          </a>
+          The best way to reach me is on LinkedIn.
         </p>
+        <div class="cta" style="margin-top:12px;">
+          <a class="btn primary" href="https://www.linkedin.com/in/jesse-lassiter" target="_blank" rel="noopener">
+            Connect on LinkedIn
+          </a>
+        </div>
       </div>
     </section>
 
