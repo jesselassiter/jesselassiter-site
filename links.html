@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Jesse Lassiter — Links and site pages." />
+  <meta name="description" content="Jesse Lassiter — Professional and social links." />
   <title>Links • Jesse Lassiter</title>
 
   <style>
@@ -34,20 +34,21 @@
     }
 
     *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
       color:var(--text);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background:
         radial-gradient(1200px 700px at 10% -10%, rgba(124,58,237,0.25), transparent 55%),
         radial-gradient(900px 600px at 90% 0%, rgba(34,211,238,0.18), transparent 55%),
         linear-gradient(180deg, var(--bg), var(--bg2));
-	  background-repeat: no-repeat;
+      background-repeat: no-repeat;
       background-size: 100% 700px, 100% 600px, 100% 100%;
       background-attachment: fixed;
       min-height: 100vh;
-
     }
+
     a{ color:inherit; text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
@@ -56,16 +57,18 @@
     header{
       display:flex; align-items:center; justify-content:space-between;
       padding: 10px 6px 18px;
+      gap: 14px;
+      flex-wrap: wrap;
     }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:0.2px; }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:0.2px; white-space:nowrap; }
     .dot{
       width:10px; height:10px; border-radius:999px;
       background: linear-gradient(135deg, var(--accent1), var(--accent2));
       box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
     }
-    .nav{ display:flex; gap:12px; color:var(--muted); font-weight:600; }
-    .nav a{ padding:8px 10px; border-radius:12px; }
-    .nav a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
+    nav{ display:flex; gap:10px; color:var(--muted); font-weight:600; flex-wrap:wrap; justify-content:flex-end; }
+    nav a{ padding:8px 10px; border-radius:12px; }
+    nav a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
 
     .hero{
       margin-top: 10px;
@@ -75,9 +78,16 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-
     h1{ margin:0 0 8px; font-size: 30px; letter-spacing:-0.4px; }
     p{ margin:0; color:var(--muted); }
+
+    .section-title{
+      margin: 18px 4px 0;
+      font-size: 14px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
     .grid{
       margin-top: 14px;
@@ -85,15 +95,16 @@
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
     }
-    .card{
+    .cardlink{
       grid-column: span 6;
       padding: 16px;
       border-radius: var(--radius);
       border: 1px solid var(--border);
       background: rgba(255,255,255,0.05);
       box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+      display:block;
     }
-    .card h2{ margin:0 0 8px; font-size: 16px; }
+    .cardlink h2{ margin:0 0 8px; font-size: 16px; }
     .desc{ color:var(--muted); font-size: 14px; margin-top: 6px; }
     .pill{
       display:inline-block;
@@ -107,6 +118,18 @@
       background: rgba(255,255,255,0.05);
     }
 
+    .simple-links{
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+    .simple-links strong{ display:block; margin-bottom: 6px; }
+    .simple-links ul{ margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
+    .simple-links li{ margin: 6px 0; }
+    .simple-links a{ text-decoration: underline; }
+
     footer{
       margin-top: 22px;
       padding: 18px 6px 0;
@@ -119,7 +142,7 @@
     }
 
     @media (max-width: 860px){
-      .card{ grid-column: 1 / -1; }
+      .cardlink{ grid-column: 1 / -1; }
     }
   </style>
 </head>
@@ -127,49 +150,93 @@
   <div class="wrap">
     <header>
       <div class="brand"><span class="dot"></span> Jesse Lassiter</div>
-      <div class="nav">
+      <nav>
         <a href="/index.html">Home</a>
         <a href="/links.html">Links</a>
-      </div>
+        <!-- Add future internal pages here (About, Case Study, etc.) -->
+      </nav>
     </header>
 
     <main class="hero">
       <h1>Links</h1>
-      <p>A simple hub for everything on this site.</p>
+      <p>Professional profiles and social channels.</p>
     </main>
 
-    <section class="grid">
-      <!-- Site Pages -->
-      <a class="card" href="/index.html">
-        <h2>Home</h2>
-        <div class="desc">Main page with highlights and contact.</div>
-        <span class="pill">Page</span>
-      </a>
-
-      <!-- Add more pages here as you create them -->
-      <a class="card" href="/links.html">
-        <h2>Links</h2>
-        <div class="desc">This page — a directory for the site.</div>
-        <span class="pill">Page</span>
-      </a>
-
-      <!-- External Links -->
-      <a class="card" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+    <div class="section-title">Professional</div>
+    <section class="grid" aria-label="Professional links">
+      <a class="cardlink" href="https://www.linkedin.com/in/jesse-lassiter/" target="_blank" rel="noopener">
         <h2>LinkedIn</h2>
-        <div class="desc">Professional profile and experience.</div>
-        <span class="pill">External</span>
+        <div class="desc">Primary professional profile.</div>
       </a>
 
-      <a class="card" href="mailto:you@jesselassiter.com">
-        <h2>Email</h2>
-        <div class="desc">Reach me directly.</div>
-        <span class="pill">Contact</span>
+      <a class="cardlink" href="https://github.com/jesselassiter" target="_blank" rel="noopener">
+        <h2>GitHub</h2>
+        <div class="desc">Code, projects, and repositories.</div>
+      </a>
+
+      <a class="cardlink" href="https://profile.indeed.com/p/jessel-8j82kgd" target="_blank" rel="noopener">
+        <h2>Indeed Profile</h2>
+        <div class="desc">Resume and job search profile.</div>
+      </a>
+
+      <a class="cardlink" href="https://about.me/jesselassiter" target="_blank" rel="noopener">
+        <h2>About.me</h2>
+        <div class="desc">Short bio / personal landing page.</div>
+      </a>
+
+      <a class="cardlink" href="https://www.notion.so/Jesse-Lassiter-3047f1dd357980768d18d7832fb5827d" target="_blank" rel="noopener">
+        <h2>Notion</h2>
+        <div class="desc">Public workspace or portfolio pages.</div>
+      </a>
+
+      <a class="cardlink" href="https://sites.google.com/view/jesselassiter" target="_blank" rel="noopener">
+        <h2>Google Sites</h2>
+        <div class="desc">Additional portfolio / resources.</div>
       </a>
     </section>
 
+    <div class="section-title">Social</div>
+    <section class="grid" aria-label="Social links">
+      <a class="cardlink" href="https://www.youtube.com/@Jesse_Lassiter" target="_blank" rel="noopener">
+        <h2>YouTube</h2>
+        <div class="desc">Videos, talks, demos, or updates.</div>
+      </a>
+
+      <a class="cardlink" href="https://x.com/lassiter_jesse_" target="_blank" rel="noopener">
+        <h2>X (Twitter)</h2>
+        <div class="desc">Short-form updates and posts.</div>
+      </a>
+
+      <a class="cardlink" href="https://www.instagram.com/lassiter_jesse_/" target="_blank" rel="noopener">
+        <h2>Instagram</h2>
+        <div class="desc">Photos and personal posts.</div>
+      </a>
+
+      <a class="cardlink" href="https://www.facebook.com/jesselassiter" target="_blank" rel="noopener">
+        <h2>Facebook</h2>
+        <div class="desc">Personal profile or page.</div>
+      </a>
+    </section>
+
+    <div class="simple-links" aria-label="Plain list of all links">
+      <strong>Plain list (for easy copying / accessibility)</strong>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/jesse-lassiter/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/jesselassiter" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://profile.indeed.com/p/jessel-8j82kgd" target="_blank" rel="noopener">Indeed Profile</a></li>
+        <li><a href="https://about.me/jesselassiter" target="_blank" rel="noopener">About.me</a></li>
+        <li><a href="https://www.notion.so/Jesse-Lassiter-3047f1dd357980768d18d7832fb5827d" target="_blank" rel="noopener">Notion</a></li>
+        <li><a href="https://sites.google.com/view/jesselassiter" target="_blank" rel="noopener">Google Sites</a></li>
+
+        <li><a href="https://www.youtube.com/@Jesse_Lassiter" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://x.com/lassiter_jesse_" target="_blank" rel="noopener">X (Twitter)</a></li>
+        <li><a href="https://www.instagram.com/lassiter_jesse_/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/jesselassiter" target="_blank" rel="noopener">Facebook</a></li>
+      </ul>
+    </div>
+
     <footer>
       <div>© <span id="year"></span> Jesse Lassiter</div>
-      <div><a href="/index.html">Back to Home</a></div>
     </footer>
   </div>
 
