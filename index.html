@@ -66,7 +66,7 @@
       background: linear-gradient(135deg, var(--accent1), var(--accent2));
       box-shadow: 0 0 0 4px rgba(124,58,237,0.12);
     }
-    nav{ display:flex; gap:14px; color:var(--muted); font-weight:600; }
+    nav{ display:flex; gap:14px; color:var(--muted); font-weight:600; flex-wrap:wrap; }
     nav a{ padding:8px 10px; border-radius:12px; }
     nav a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
 
@@ -166,7 +166,6 @@
     }
 
     @media (max-width: 860px){
-      nav{ display:none; }
       .card{ grid-column: 1 / -1; }
     }
   </style>
@@ -203,6 +202,7 @@
       <div class="cta">
         <a class="btn primary" href="/links.html">Explore Links</a>
         <a class="btn" href="https://www.linkedin.com/in/jesse-lassiter/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:you@jesselassiter.com">Email</a>
       </div>
 
       <div class="meta">U.S.-based • Open to remote • Director / VP-level roles</div>
@@ -231,46 +231,46 @@
       </div>
     </section>
 
-	<section id="work" class="grid">
-	  <div class="card full">
-		<h2>Enterprise Platform Modernization &amp; Resilience Program</h2>
-		<p>
-		  Led cross-functional engineering and product teams (30+ professionals) delivering secure,
-		  scalable enterprise platforms within a highly regulated financial environment.
-		</p>
-		<ul class="list">
-		  <li>Owned multi-year modernization roadmap improving platform resilience, disaster recoverability, and automation maturity.</li>
-		  <li>Directed vendor oversight, financial planning, and risk-aligned governance supporting secure enterprise operations.</li>
-		  <li>Reduced operational friction and strengthened service reliability through workflow redesign and structured engineering practices.</li>
-		  <li>Improved incident reduction, release stability, and delivery predictability using Agile execution and data-informed prioritization.</li>
-		</ul>
-		<div class="meta">
-		  Scope: Enterprise Platform Services • Infrastructure &amp; Automation • Risk &amp; Compliance Alignment
-		</div>
-	  </div>
+    <section id="work" class="grid">
+      <div class="card full">
+        <h2>Enterprise Platform Modernization &amp; Resilience Program</h2>
+        <p>
+          Led cross-functional engineering and product teams (30+ professionals) delivering secure,
+          scalable enterprise platforms within a highly regulated financial environment.
+        </p>
+        <ul class="list">
+          <li>Owned multi-year modernization roadmap improving platform resilience, disaster recoverability, and automation maturity.</li>
+          <li>Directed vendor oversight, financial planning, and risk-aligned governance supporting secure enterprise operations.</li>
+          <li>Reduced operational friction and strengthened service reliability through workflow redesign and structured engineering practices.</li>
+          <li>Improved incident reduction, release stability, and delivery predictability using Agile execution and data-informed prioritization.</li>
+        </ul>
+        <div class="meta">
+          Scope: Enterprise Platform Services • Infrastructure &amp; Automation • Risk &amp; Compliance Alignment
+        </div>
+      </div>
 
-	  <div class="card">
-		<h2>Engineering Organization Leadership</h2>
-		<p>
-		  Built and led high-performing engineering organizations across healthcare and financial systems environments,
-		  focusing on reliability, modernization, and long-term scalability.
-		</p>
-		<div class="meta">
-		  30+ Engineers • Enterprise Healthcare &amp; Financial Systems • Platform &amp; Service Delivery
-		</div>
-	  </div>
+      <div class="card">
+        <h2>Engineering Organization Leadership</h2>
+        <p>
+          Built and led high-performing engineering organizations across healthcare and financial systems environments,
+          focusing on reliability, modernization, and long-term scalability.
+        </p>
+        <div class="meta">
+          30+ Engineers • Enterprise Healthcare &amp; Financial Systems • Platform &amp; Service Delivery
+        </div>
+      </div>
 
-	  <div class="card">
-		<h2>Operational Excellence &amp; Automation</h2>
-		<p>
-		  Strengthened configuration hygiene, vulnerability management, and deployment workflows through structured automation,
-		  significantly reducing resolution times and increasing system stability.
-		</p>
-		<div class="meta">
-		  Automation • Reliability Engineering • Process Optimization
-		</div>
-	  </div>
-	</section>
+      <div class="card">
+        <h2>Operational Excellence &amp; Automation</h2>
+        <p>
+          Strengthened configuration hygiene, vulnerability management, and deployment workflows through structured automation,
+          significantly reducing resolution times and increasing system stability.
+        </p>
+        <div class="meta">
+          Automation • Reliability Engineering • Process Optimization
+        </div>
+      </div>
+    </section>
 
     <section id="about" class="grid">
       <div class="card full">
@@ -287,23 +287,21 @@
       </div>
     </section>
 
-	<section id="contact" class="grid">
-	  <div class="card full">
-		<h2>Let’s Connect</h2>
-		<p>
-		  I welcome conversations regarding Director and VP-level technology leadership opportunities,
-		  enterprise modernization initiatives, and platform strategy roles.
-		  <br><br>
-		  Email: <a href="mailto:you@jesselassiter.com">you@jesselassiter.com</a>
-		  &nbsp;•&nbsp;
-		  <a href="https://www.linkedin.com/in/jesse-lassiter" target="_blank" rel="noopener">
-			LinkedIn Profile
-		  </a>
-		  &nbsp;•&nbsp;
-		  <a href="/links.html">All Links</a>
-		</p>
-	  </div>
-	</section>
+    <section id="contact" class="grid">
+      <div class="card full">
+        <h2>Let’s Connect</h2>
+        <p>
+          I welcome conversations regarding Director and VP-level technology leadership opportunities,
+          enterprise modernization initiatives, and platform strategy roles.
+          <br><br>
+          Email: <a href="mailto:you@jesselassiter.com">you@jesselassiter.com</a>
+          &nbsp;•&nbsp;
+          <a href="https://www.linkedin.com/in/jesse-lassiter" target="_blank" rel="noopener">
+            LinkedIn Profile
+          </a>
+        </p>
+      </div>
+    </section>
 
     <footer>
       <div>© <span id="year"></span> Jesse Lassiter</div>
